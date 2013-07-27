@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Editor</title>
+    <link href="css/editorCss.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/optionList.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" id='jquery' src='scripts/jquery.js'></script>
+    <script type="text/javascript" id='editor' src='scripts/editor.js'></script>
+    <script type="text/javascript" id='options_popup' src='scripts/options_popup.js'></script>
+</head>
+<!--<div id="for_popup">hello</div>-->
+<!--<div id='for_popup2'>hello2</div>-->
+<!--<img src="images/text.svg" alt=""/>-->
+<!--<input type='file' accept="image/*" />-->
+<div id="editor-canvas"></div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#editor-canvas').editor();
+        $('#for_popup').option_list([ ['one', function(){alert('one')}], ['two', function(){ alert('two') }] ]);
+        $('#for_popup2').option_list([ ['three', function(){alert('three')}], ['four', function(){alert('four')}] ])
+    });
+</script>
+</html>
