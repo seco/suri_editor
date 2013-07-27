@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9354ab97-062a-4b06-abe8-f5ab30ddda43" name="Default" comment="" />
+    <list default="true" id="9354ab97-062a-4b06-abe8-f5ab30ddda43" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
     <ignored path="editor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/editor.html" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374845120336" ignored="false" />
@@ -13,6 +15,7 @@
     <file path="/editor-css.css" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374840095691" ignored="false" />
     <file path="/editorCss.css" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374952136235" ignored="false" />
     <file path="/optionList.css" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374847612684" ignored="false" />
+    <file path="/Dummy.txt" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374953089076" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +98,14 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -137,7 +148,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -217,7 +228,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/Projects/educroc" />
     <property name="FullScreen" value="true" />
@@ -393,7 +404,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
