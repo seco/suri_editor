@@ -40,7 +40,7 @@
             ]);
 
 
-            $(element).find('#handle-button').on({
+            element.find('#handle-button').on({
                 'click': function(){
                     $(this).hide();
                     $('#handle-bar').show();
@@ -96,7 +96,13 @@
                 }
 
             });
-        };
+
+
+            element.on('mouseenter', '.added-data', function(e){
+                alert( $(e.target) );
+            });
+
+        }; // initialize ends
 
         function validateAndSubmitYoutubeVideo($youtube_video){
             if($youtube_video.val()&&$youtube_video.val().length>0){
@@ -189,9 +195,10 @@
 
         function launchLinkInput(){
             var button = $('#handle-button');
-            var link_div = "<div class='editor-input link-helper' ><span>Alias :</span><input placeholder='name' class='alias' type='text' /><span>Address</span><input placeholder='url' class='address' type='text' ></div>";
+            var link_div = "<div class='editor-input link-helper' ><label>Alias :</label><input placeholder='name' class='alias' type='text' /><label>Address</label><input placeholder='url' class='address' type='text' ></div>";
             button.before(link_div);
             revertToInputState();
+            $('.alias').focus();
         }
 
         function launchImageUpload(){
@@ -272,3 +279,9 @@
         e.initialize(this);
     }
 }(jQuery));
+
+
+//TODO add validateAndSubmit<Data> on Enter
+//TODO add saveAndGenerateHtml for user to save the page finally
+//TODO add confirm window closing on window.close()
+//TODO allow user to edit and delete the input dynamically

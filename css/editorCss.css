@@ -168,3 +168,8 @@
 .link-helper{
     text-align: center;
 }
+
+.link-helper input{
+    border: 1px lightgray solid;
+    font-family: sans-serif;
+}
