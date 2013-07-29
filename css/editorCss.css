@@ -12,8 +12,8 @@
 }
 
 #handle-button img{
-    background-color: #00d123;
     cursor: pointer;
+    background: #00d123 linear-gradient(#00d123, #00b500);
 }
 
 #handle-button img:hover{
@@ -26,8 +26,8 @@
 }
 
 #text-part img{
-    background-color: #00d123;
     margin: 0.5% 0.5% 0.5% 0.5%;
+    background: #00d123 linear-gradient(#00d123, #00b500);
 }
 
 #image-part img:hover{
@@ -35,7 +35,7 @@
 }
 
 #image-part img{
-    background-color: #00d123;
+    background: #00d123 linear-gradient(#00d123, #00b500);
     margin: 0.5% 0.5% 0.5% 0.5%;
 }
 
@@ -44,7 +44,7 @@
 }
 
 #video-part img{
-    background-color: #00d123;
+    background: #00d123 linear-gradient(#00d123, #00b500);
     margin: 0.5% 0.5% 0.5% 0.5%;
 }
 
@@ -53,7 +53,7 @@
 }
 
 #more-part img{
-    background-color: #00d123;
+    background: #00d123 linear-gradient(#00d123, #00b500);
     margin: 0.5% 0.5% 0.5% 0.5%;
 }
 
@@ -62,7 +62,7 @@
 }
 
 #apps-part img{
-    background-color: #00d123;
+    background: #00d123 linear-gradient(#00d123, #00b500);
     margin: 0.5% 0.5% 0.5% 0.5%;
 }
 
@@ -173,3 +173,8 @@
     border: 1px lightgray solid;
     font-family: sans-serif;
 }
+
+.rounded-corner{
+    border-radius: 6px;
+}
+

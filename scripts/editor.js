@@ -26,6 +26,7 @@
 
             $handlebar.find('#image-part').option_list([
                 [ 'Upload', function(){ launchImageUpload() } ],
+                [ 'Address', function(){ launchImageByUrl() } ],
                 [ 'Web cam', function(){ alert('web cam') } ]
             ]);
 
@@ -87,6 +88,10 @@
 
                                 validateAndSubmitYoutubeVideo($(element));
 
+                            }else if($(element).hasClass('image-url')){
+
+                                validateAndSubmitImageUrl($(element));
+
                             }
 
                         });
@@ -97,9 +102,15 @@
 
             });
 
+            element.on('keypress', '.editor-input', function(event){
+                if( event.which == 13 ){
+                    element.trigger('mouseup');
+                }
+            });
+
 
             element.on('mouseenter', '.added-data', function(e){
-                alert( $(e.target) );
+//                alert( $(e.target) );
             });
 
         }; // initialize ends
@@ -127,6 +138,15 @@
                 $link_helper.replaceWith(link);
             }else{
               $link_helper.remove();
+            }
+        }
+
+        function validateAndSubmitImageUrl($image){
+            if($image.val()&&$image.val().length>0){
+                var image_field = "<img src='"+ $image.val() +"' class='added-data added-image-url'/>";
+                $image.replaceWith(image_field);
+            }else{
+                $image.remove();
             }
         }
 
@@ -175,6 +195,14 @@
             } else {
                 $para.remove();
             }
+        }
+
+        function launchImageByUrl(){
+            var $button = $('#handle-button');
+            var image_url = "<input type='text' class='editor-input image-url' placeholder='Url of Image' />";
+            $button.before(image_url);
+            $('.image-url').focus();
+            revertToInputState();
         }
 
         function launchYoutubeInput(){
@@ -253,11 +281,11 @@
             var videoPart;
             var morePart;
             var appsPart;
-            textPart = "<a id='text-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img src='images/text.svg' /></a>";
-            imagePart = "<a id='image-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img src='images/image.svg'></a>";
-            videoPart = "<a id='video-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img src='images/video.svg'></a>";
-            morePart = "<a id='more-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img src='images/more.svg'></a>";
-            appsPart = "<a id='apps-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img src='images/apps.svg'></a>";
+            textPart = "<a id='text-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img class='rounded-corner' src='images/text.svg' /></a>";
+            imagePart = "<a id='image-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img class='rounded-corner' src='images/image.svg'></a>";
+            videoPart = "<a id='video-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img class='rounded-corner' src='images/video.svg'></a>";
+            morePart = "<a id='more-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img class='rounded-corner' src='images/more.svg'></a>";
+            appsPart = "<a id='apps-part' class='pointer' ><!--suppress HtmlUnknownTarget --><img class='rounded-corner' src='images/apps.svg'></a>";
             handle = "<div id='handle-bar'>"+textPart+imagePart+videoPart+morePart+appsPart+"</div>";
             return handle;
         }
@@ -280,8 +308,9 @@
     }
 }(jQuery));
 
-
-//TODO add validateAndSubmit<Data> on Enter
-//TODO add saveAndGenerateHtml for user to save the page finally
-//TODO add confirm window closing on window.close()
-//TODO allow user to edit and delete the input dynamically
+/*
+ TOD add validateAndSubmit<Data> on Enter
+ TODO add saveAndGenerateHtml for user to save the page finally
+ TODO add confirm window closing on window.close()
+ TODO allow user to edit and delete the input dynamically
+ */
