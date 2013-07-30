@@ -3,6 +3,9 @@
     <words>
       <w>lightgray</w>
       <w>mouseenter</w>
+      <w>mouseout</w>
+      <w>mouseup</w>
+      <w>onbeforeunload</w>
       <w>onload</w>
       <w>suri</w>
     </words>

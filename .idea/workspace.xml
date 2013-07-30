@@ -11,14 +11,14 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/editor.html" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374845120336" ignored="false" />
     <file path="/dummy.xml" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374671909744" ignored="false" />
-    <file path="/editor.js" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1375119006031" ignored="false" />
+    <file path="/editor.js" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1375195483578" ignored="false" />
     <file path="/options_popup.js" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374823675267" ignored="false" />
     <file path="/a.rxml" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374690807921" ignored="false" />
     <file path="/a.rb" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374690828056" ignored="false" />
     <file path="/editor-css.css" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374840095691" ignored="false" />
-    <file path="/editorCss.css" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1375030928546" ignored="false" />
+    <file path="/editorCss.css" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1375192701893" ignored="false" />
     <file path="/optionList.css" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1374847612684" ignored="false" />
-    <file path="/Dummy.txt" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1375119380691" ignored="false" />
+    <file path="/Dummy.txt" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1375188476539" ignored="false" />
     <file path="/image_uploader.js" changelist="9354ab97-062a-4b06-abe8-f5ab30ddda43" time="1375027115086" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,44 +38,7 @@
     <favorites_list name="editor" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="editorCss.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/editorCss.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="surajpratap.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/dictionaries/surajpratap.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="520" column="32" selection-start="29736" selection-end="29736" vertical-scroll-proportion="0.42364532">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editor.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/editor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="52" selection-start="3984" selection-end="3984" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -99,10 +62,10 @@
         <option value="$PROJECT_DIR$/css/optionList.css" />
         <option value="$PROJECT_DIR$/editor.html" />
         <option value="$PROJECT_DIR$/scripts/image_uploader.js" />
-        <option value="$PROJECT_DIR$/css/editorCss.css" />
-        <option value="$PROJECT_DIR$/scripts/editor.js" />
         <option value="$PROJECT_DIR$/.idea/dictionaries/surajpratap.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/css/editorCss.css" />
+        <option value="$PROJECT_DIR$/scripts/editor.js" />
       </list>
     </option>
   </component>
@@ -118,18 +81,18 @@
             <id />
           </State>
           <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
             <id>Internationalization issues</id>
           </State>
           <State>
             <id>JavaScript</id>
           </State>
+          <State>
+            <id>Spelling</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>JSCheckFunctionSignatures</id>
+            <id>SpellCheckingInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -350,6 +313,11 @@
       <created>1374646642984</created>
       <updated>1374646642984</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added image upload by url.">
+      <created>1375119437613</created>
+      <updated>1375119437613</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -374,22 +342,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30341882" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1758509" sideWeight="0.8319088" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18962723" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20259319" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16381766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39914772" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -478,9 +447,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="64078" selection-end="64078" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="17" selection-start="64078" selection-end="64078" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/editor.js">
@@ -507,9 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="64078" selection-end="64078" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="17" selection-start="64078" selection-end="64078" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/editor.html">
@@ -517,44 +482,38 @@
         <state line="22" column="44" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-0.625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/options_popup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="79" selection-start="156" selection-end="156" vertical-scroll-proportion="0.022692889">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/optionList.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="36" selection-start="3579" selection-end="3579" vertical-scroll-proportion="1.9211823" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/surajpratap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="0.1789976" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/options_popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="79" selection-start="156" selection-end="156" vertical-scroll-proportion="0.22624435">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="52" selection-start="3984" selection-end="3984" vertical-scroll-proportion="0.0">
+        <state line="130" column="0" selection-start="3965" selection-end="3965" vertical-scroll-proportion="2.9411764">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/editorCss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/surajpratap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="520" column="32" selection-start="29736" selection-end="29736" vertical-scroll-proportion="0.42364532">
+        <state line="142" column="16" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.38017753">
           <folding />
         </state>
       </provider>

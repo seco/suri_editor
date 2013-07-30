@@ -3,8 +3,17 @@
     function SuriEditor(){
         this.handleBar = createHandleBar();
         this.handleButton = createHandleButton();
+        this.optionMenu = "<div class='option-menu' >Delete</div>";
 
         this.initialize = function(element){
+
+//            bootStrap(element);
+
+            window.onbeforeunload = function(){
+                return "If you leave, all unsaved changes will be lost.";
+            };
+
+
 
 
 //            this.canvasId = element.attr('id');
@@ -26,8 +35,7 @@
 
             $handlebar.find('#image-part').option_list([
                 [ 'Upload', function(){ launchImageUpload() } ],
-                [ 'Address', function(){ launchImageByUrl() } ],
-                [ 'Web cam', function(){ alert('web cam') } ]
+                [ 'Address', function(){ launchImageByUrl() } ]
             ]);
 
 //            more part
@@ -94,6 +102,7 @@
 
                             }
 
+
                         });
 
                     }
@@ -113,12 +122,55 @@
 //                alert( $(e.target) );
             });
 
+            element.on('mouseenter', '.dynamic-edit', function(e){
+                $(this).html('Add Here');
+            });
+
+            element.on('mouseout', '.dynamic-edit', function(e){
+                $(this).html('');
+            });
+
+            element.on('click', '.dynamic-edit', function(){
+                //noinspection JSJQueryEfficiency
+                $('#handle-button').before("<div class='dynamic-edit center'></div>");
+                //noinspection JSJQueryEfficiency
+                var $button = $('#handle-button').detach();
+                //noinspection JSJQueryEfficiency
+                var $bar = $('#handle-bar').detach();
+
+                $(this).replaceWith($bar);
+                //noinspection JSJQueryEfficiency
+                $('#handle-bar').before($button);
+
+                //noinspection JSJQueryEfficiency
+                $('#handle-button').trigger('click');
+            })
+
         }; // initialize ends
+
+//        function bootStrap($div){
+//
+//            var data = "<input placeholder='Add Title' class='editor-input text-title'>\
+//            <textarea placeholder='Write something' class='editor-input text-para'></textarea>\
+//            <textarea placeholder='This is a awesome editor' class='editor-input text-para'></textarea>";
+//
+//            $div.append(data);
+//
+//
+//        }
+
+        function addDynamicEdit(){
+            var button = $('#handle-button');
+            var edit = "<div class='dynamic-edit center'></div>";
+            button.prev().before(edit);
+        }
 
         function validateAndSubmitYoutubeVideo($youtube_video){
             if($youtube_video.val()&&$youtube_video.val().length>0){
-                var video_field = "<div class='added-data added-youtubeVideo'><video src="+$youtube_video.val()+"></video></div>";
+                var video_id = $youtube_video.val().split('v=')[1];
+                var video_field = "<iframe  class='added-data added-youtubeVideo' width='640' height='360' src='http://www.youtube.com/embed/"+ video_id +"?wmode=opaque&feature=oembed'></iframe>";
                 $youtube_video.replaceWith(video_field);
+                addDynamicEdit();
             }else{
                 $youtube_video.remove();
             }
@@ -127,15 +179,17 @@
         function validateAndSubmitLink($link_helper){
             var address;
             var alias = $($link_helper.children()[1]).val();
+            //noinspection JSCheckFunctionSignatures
             address = $($($link_helper).children()[3]).val();
             if( address && address.length>0 ){
                 var link = null;
                 if(alias && alias.length>0){
-                    link = "<a href="+ address +">"+alias+"</a>";
+                    link = "<a class='added-data added-link' href="+ address +">"+alias+"</a>";
                 }else{
-                    link = "<a href="+ address +">"+address+"</a>";
+                    link = "<a class='added-data added-link' href="+ address +">"+address+"</a>";
                 }
                 $link_helper.replaceWith(link);
+                addDynamicEdit();
             }else{
               $link_helper.remove();
             }
@@ -143,8 +197,9 @@
 
         function validateAndSubmitImageUrl($image){
             if($image.val()&&$image.val().length>0){
-                var image_field = "<img src='"+ $image.val() +"' class='added-data added-image-url'/>";
+                var image_field = "<img src='"+ $image.val() +"'class='added-data added-image-url'/>";
                 $image.replaceWith(image_field);
+                addDynamicEdit();
             }else{
                 $image.remove();
             }
@@ -154,6 +209,7 @@
             if($image_field.val() && $image_field.val().length > 0){
 
                 $image_field.removeClass('editor-input').addClass('added-data').hide();
+                addDynamicEdit();
 
             }else{
                 if( $image_field.prev().hasClass('image-preview') ){
@@ -166,6 +222,7 @@
         function validateAndSubmitTitle($title){
             if($title.val() && $title.val().length > 0){
                 $title.replaceWith("<h1 class='added-title added-data'>"+ $title.val() +"</h1>");
+                addDynamicEdit();
             }else{
                 $title.remove();
             }
@@ -176,6 +233,7 @@
                 var data = $html.val();
                 $html.replaceWith("<div class='added-html added-data'></div>");
                 $('#handle-button').prev().append(data);
+                addDynamicEdit();
             }else{
                 $html.remove();
             }
@@ -184,6 +242,7 @@
         function validateAndSubmitHeading($header){
             if($header.val() && $header.val().length > 0){
                 $header.replaceWith("<h1 class='added-heading added-data'>"+ $header.val() +"</h1>");
+                addDynamicEdit();
             }else{
                 $header.remove();
             }
@@ -192,6 +251,7 @@
         function validateAndSubmitPara($para){
             if ($para.val() && $para.val().length > 0) {
                 $para.replaceWith("<p class='added-para added-data'>" + $para.val() + "</p>");
+                addDynamicEdit();
             } else {
                 $para.remove();
             }
@@ -248,7 +308,7 @@
             if($(input).prev().hasClass('image-preview')){
                 $(input).prev().remove();
             }
-            $(input).before("<img class='image-preview tmp' src='#' />");
+            $(input).before("<img class='image-preview added-data tmp' src='#' />");
             if(input.files && input.files[0]){
                 var reader = new FileReader();
                 reader.onload = function (e) {
@@ -303,14 +363,13 @@
     }
 
     $.fn.editor = function(){
-        var e = new SuriEditor;
-        e.initialize(this);
+        new SuriEditor().initialize(this);
     }
 }(jQuery));
 
 /*
  TOD add validateAndSubmit<Data> on Enter
  TODO add saveAndGenerateHtml for user to save the page finally
- TODO add confirm window closing on window.close()
+ TOD add confirm window closing on window.close()
  TODO allow user to edit and delete the input dynamically
  */
