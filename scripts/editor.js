@@ -16,9 +16,12 @@
 
     var image_field = "<input type='file' class='editor-input uploaded-pic' accept='image/*' />";
 
+
+
     function SuriEditor(){
         this.handleBar = createHandleBar();
         this.handleButton = createHandleButton();
+
 
 
         this.initialize = function(element){
@@ -64,6 +67,10 @@
                 [ 'Youtube', function(){ launchYoutubeInput() } ]
             ]);
 
+//            apps part
+            $handlebar.find('#apps-part').option_list([
+                [ 'Preview', function(){ launchPreview(element.attr('id')) } ]
+            ]);
 
             element.find('#handle-button').on({
                 'click': function(){
@@ -183,6 +190,21 @@
 //
 //        }
 
+        function launchPreview(id){
+            var editor = $('#'+id);
+            var data = $(editor.html());
+            var preview = new ModelView();
+            preview.setWidth('70%');
+            preview.setData(data);
+            preview.ready();
+            preview.$addedContainer().find('.dynamic-edit').remove();
+            preview.$addedContainer().find('#handle-button').remove();
+            preview.$addedContainer().find('#handle-bar').remove();
+            preview.$addedContainer().find('.added-data').removeClass('added-data');
+            preview.launch();
+        }
+
+
         function addMouseenterPopup(){
             var added = $('.added-data');
             $.each(
@@ -264,7 +286,7 @@
             if($youtube_video.val()&&$youtube_video.val().length>0){
                 var video_id = $youtube_video.val().split('v=')[1];
 
-                var video_field = "<iframe  class='added-data added-youtubeVideo' width='640' height='360' src='http://www.youtube.com/embed/"+ video_id +"?wmode=opaque&feature=oembed'></iframe>";
+                var video_field = "<iframe  class='added-data added-youtubeVideo' width='50%' height='50%' src='http://www.youtube.com/embed/"+ video_id +"?wmode=opaque&feature=oembed'></iframe>";
                 addDynamicEdit($youtube_video);
                 $youtube_video.replaceWith(video_field);
 
@@ -491,5 +513,5 @@
  TOD add validateAndSubmit<Data> on Enter
  TODO add saveAndGenerateHtml for user to save the page finally
  TOD add confirm window closing on window.close()
- TODO allow user to edit and delete the input dynamically
+ TOD allow user to edit and delete the input dynamically
  */
