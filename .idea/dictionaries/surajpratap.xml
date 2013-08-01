@@ -4,6 +4,7 @@
       <w>lightgray</w>
       <w>mouseenter</w>
       <w>mouseout</w>
+      <w>mouseover</w>
       <w>mouseup</w>
       <w>onbeforeunload</w>
       <w>onload</w>

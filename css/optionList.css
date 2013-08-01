@@ -16,3 +16,19 @@
 .popup_ li:hover{
     background-color: lightgray;
 }
+
+.block-ul{
+    display: block;
+}
+
+.block-li{
+    display: inline-block;
+    min-height: 21px;
+    min-width: 21px;
+}
+
+.block-li img{
+    display: block;
+    min-width: 20px;
+    min-height: 20px;
+}

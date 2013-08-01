@@ -198,6 +198,10 @@
     border-radius: 6px;
 }
 
+.added-data{
+    border: 1px white dashed;
+}
+
 .added-data:hover{
     border: 1px lightgray dashed;
     cursor: pointer;
@@ -208,6 +212,11 @@
     font-size: 10px;
     font-family: sans-serif;
     cursor: copy;
+    border: 1px white dashed;
+}
+
+.dynamic-edit:hover{
+    border: 1px green dashed;
 }
 
 .center{
