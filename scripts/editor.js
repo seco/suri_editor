@@ -21,7 +21,16 @@
     function SuriEditor(){
         this.handleBar = createHandleBar();
         this.handleButton = createHandleButton();
+        this.imgAddress = undefined;
+        this.saveAddress = undefined;
 
+        this.setImgAddress = function(a){
+            this.imgAddress = a;
+        };
+
+        this.setSaveAddress = function(a){
+            this.saveAddress = a;
+        };
 
 
         this.initialize = function(element){
@@ -69,7 +78,8 @@
 
 //            apps part
             $handlebar.find('#apps-part').option_list([
-                [ 'Preview', function(){ launchPreview(element.attr('id')) } ]
+                [ 'Preview', function(){ launchPreview(element.attr('id')) } ],
+                [ 'Save', function(){ alert('save') } ]
             ]);
 
             element.find('#handle-button').on({
@@ -504,8 +514,11 @@
 
     }
 
-    $.fn.editor = function(){
-        new SuriEditor().initialize(this);
+    $.fn.editor = function(save_address, img_address){
+        var e = new SuriEditor();
+        e.initialize(this);
+        e.setSaveAddress(save_address);
+        e.setImgAddress(img_address);
     }
 }(jQuery));
 
